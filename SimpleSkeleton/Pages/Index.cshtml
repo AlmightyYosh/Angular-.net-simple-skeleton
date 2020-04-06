@@ -1,0 +1,16 @@
+﻿@page
+@using SimpleSkeleton.Components
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Simple Skeleton</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+
+<!--Connecting to the Blazor component -->
+@(await Html.RenderComponentAsync<ProductList>(RenderMode.ServerPrerendered))
+<script src="_framework/blazor.server.js"></script>
